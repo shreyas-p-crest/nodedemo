@@ -1,4 +1,5 @@
-var app = require('http').createServer(handler);
+//var app = require('http').createServer(handler);
+var app = require('https').createServer(handler);
 var fs = require('fs');
 var chat = require('rs-chat')(app);
 
