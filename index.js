@@ -3,11 +3,12 @@ var fs = require('fs');
 var chat = require('rs-chat')(app);
 
 chat.init({
-  host     : '127.0.0.1',
-  user     : 'root',
+  host     : 'localhost',
+ user     : 'root',
   password : 'nodedemo',
   database : 'rs_chat',
-  assets   : 'assets'
+  assets   : 'assets',
+insecureAuth : true
 });
 
 app.listen(8080);
