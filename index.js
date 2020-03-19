@@ -3,17 +3,17 @@ var fs = require('fs');
 var chat = require('rs-chat')(app);
 
 chat.init({
-  host     : 'localhost',
- user     : 'root',
-  password : 'nodedemo',
-  database : 'rs_chat',
-  assets   : 'assets',
-insecureAuth : true
+  host: 'localhost',
+  user: 'root',
+  password: 'nodedemo',
+  database: 'rs_chat',
+  assets: 'assets',
+  insecureAuth: true
 });
 
 app.listen(8080);
 
- 
+
 // console.log('Server started at 8080');
 // console.log('Now you have two end point: http://localhost:8080/index.html');
 // console.log('Second end point is http://localhost:8080/index2.html');
@@ -21,11 +21,11 @@ app.listen(8080);
 // console.log('Have fun :)');
 
 
-function handler (req, res) {
+function handler(req, res) {
 
-    var filePath = '.' + req.url;
-    if (filePath == './')
-        filePath = './index.html';
+  var filePath = '.' + req.url;
+  if (filePath == './')
+    filePath = './index.html';
 
   fs.readFile(filePath, function (err, data) {
     if (err) {
